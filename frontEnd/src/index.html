@@ -1,13 +1,64 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Reviutn</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Definimos 3 columnas */
+            gap: 20px; /* Espacio entre elementos */
+        }
+
+        .course {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .course:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
 </head>
 <body>
-  <app-root></app-root>
+    <h1>Ingenieria en sistemas de información</h1>
+    <div class="grid-container">
+        <div class="course" onclick="mostrarInfoCurso(1)">
+            <h2>Curso 1</h2>
+            <p>Duración: 8 semanas</p>
+            <p>Instructor: Juan Pérez</p>
+        </div>
+        <div class="course" onclick="mostrarInfoCurso(2)">
+            <h2>Curso 2</h2>
+            <p>Duración: 6 semanas</p>
+            <p>Instructor: María López</p>
+        </div>
+        <div class="course" onclick="mostrarInfoCurso(3)">
+            <h2>Curso 3</h2>
+            <p>Duración: 10 semanas</p>
+            <p>Instructor: Carlos Rodríguez</p>
+        </div>
+        <!-- Agrega más cursos aquí -->
+    </div>
+
+    <div id="infoCurso">
+        <!-- Aquí se mostrará la información del curso seleccionado -->
+    </div>
+
+    <script>
+        function mostrarInfoCurso(curso) {
+            var infoCurso = document.getElementById("infoCurso");
+            infoCurso.innerHTML = "";
+
+            if (curso === 1) {
+                infoCurso.innerHTML = "<h3>Información del Curso 1</h3><p>Este es el contenido del Curso 1.</p>";
+            } else if (curso === 2) {
+                infoCurso.innerHTML = "<h3>Información del Curso 2</h3><p>Este es el contenido del Curso 2.</p>";
+            } else if (curso === 3) {
+                infoCurso.innerHTML = "<h3>Información del Curso 3</h3><p>Este es el contenido del Curso 3.</p>";
+            }
+            // Agrega más casos para otros cursos si es necesario
+        }
+    </script>
 </body>
 </html>
