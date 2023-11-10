@@ -76,7 +76,6 @@ app.get("/api/resenias", (req, res) => {
             res.status(500).send(err);
         });
 });
-
 app.get("/api/resenias", (req, res) => {
     resenias.find({ profesor }).exec()
         .then(docs => {
@@ -86,6 +85,7 @@ app.get("/api/resenias", (req, res) => {
             res.status(500).send(err);
         });
 });
+
 
 app.get("/api/resenias", (req, res) => {
     const { profesor } = req.query;
@@ -100,19 +100,11 @@ app.get("/api/resenias", (req, res) => {
         });
 });
 
-app.get("/api/resenias", (req, res) => {
-    const { materia } = req.query;
-    const filtro = materia ? { materia } : {};
 
-    resenias.find(filtro).exec()
-        .then(docs => {
-            res.status(200).send(docs);
-        })
-        .catch(err => {
-            res.status(500).send(err);
-        });
+
+app.get('/', (req, res) => {
+    res.send('¡Hola Mundo!');
 });
-
 
 app.listen(port, () => {
     console.log(`Server is listening at http://localhost:${port}`)
