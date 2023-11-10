@@ -20,4 +20,7 @@ Descargo MongoDB como extensión en Visual
 mongodb+srv://reviutn:iTCJvCLSnPPNtLAw@cluster0.zxy3ryx.mongodb.net/?retryWrites=true&w=majority (url del MONGODB)
 
 
+----PARA INICIALIZAR FRONT-END---
+En la carpeta de front (dentro de la cmd) usar ng serve
+
 
