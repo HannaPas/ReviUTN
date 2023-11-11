@@ -11,8 +11,8 @@
 
 }
 
-.header-logo img.header-favicon {
-    height: 35px;
+.header-logo img {
+    height: 120px;
     padding: 25px;
 
 }
@@ -20,4 +20,19 @@
 .profile-icon {
     font-size: 30px;
     padding: 25px;
+}
+
+
+.header-search {
+    flex-grow: 1; /* El buscador toma todo el espacio disponible para centrarse */
+    margin: 0 10px; /* Ajusta el margen según sea necesario */
+  }
+  
+.header-search input {
+    width: 85%; /* El input del buscador ocupa todo el ancho disponible */
+    border-radius: 10px;
+  }
+
+.header-search button {
+    background-color: white;
 }

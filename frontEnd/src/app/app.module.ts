@@ -8,6 +8,8 @@ import { DashboardComponent } from './vistas/dashboard/dashboard.component';
 import { HeaderComponent } from './plantillas/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RatingComponent } from './plantillas/rating/rating.component';
+import { ToggleComponent } from './plantillas/toggle/toggle.component';
+
 
 
 @NgModule({
@@ -15,7 +17,8 @@ import { RatingComponent } from './plantillas/rating/rating.component';
     AppComponent,
     DashboardComponent,
     HeaderComponent,
-    RatingComponent
+    RatingComponent,
+    ToggleComponent
   ],
   imports: [
     BrowserModule,

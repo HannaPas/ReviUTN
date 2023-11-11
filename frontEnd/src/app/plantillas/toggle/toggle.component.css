@@ -1,0 +1,16 @@
+button {
+    color: rgb(28, 5, 32);
+    border-color:rgb(180, 176, 180); 
+}
+
+button:focus {
+    outline: none; /* Elimina el contorno predeterminado al enfocar */
+    box-shadow: 0 0 5px rgb(132,52,148); /* Añade una sombra al enfocar */
+}
+
+.boton-seleccionado {
+    background-color: rgb(132,52,148);  /* Color cuando está seleccionado */
+    color: white;  /* Color del texto cuando está seleccionado */
+    border-color: rgb(132,52,148);  /* Color del borde cuando está seleccionado */
+  }
+  
