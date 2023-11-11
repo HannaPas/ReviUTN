@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "cbd70e06-74dd-46d1-9ea9-478d7568f991",
+		"name": "API ReviUtn",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30345308"
+	},
+	"item": [
+		{
+			"name": "Publicar Reseña",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"id\": 1,\r\n        \"materia\": \"Algebra\",\r\n        \"profesor\": \"Juan Ramirez\",\r\n        \"texto\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\",\r\n        \"positivas\": 20,\r\n        \"negativas\": 5,\r\n        \"estrellas\": 3\r\n    },\r\n    {\r\n        \"id\": 2,\r\n        \"materia\": \"Discreta\",\r\n        \"profesor\": \"Pedro Perez\",\r\n        \"texto\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\",\r\n        \"positivas\": 16,\r\n        \"negativas\": 3,\r\n        \"estrellas\": 2\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5500/api/resenias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"api",
+						"resenias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar Reseña",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5500/api/resenias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"api",
+						"resenias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar Reseña",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5500/api/resenias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"api",
+						"resenias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar por Profesor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5500/api/resenias?profesor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"api",
+						"resenias"
+					],
+					"query": [
+						{
+							"key": "profesor",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar por Materia",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5500/api/resenias?materia",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"api",
+						"resenias"
+					],
+					"query": [
+						{
+							"key": "materia",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
