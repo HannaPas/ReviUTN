@@ -1,13 +1,16 @@
-import mongoose from "mongoose"
+import mongoose from 'mongoose';
 
-const resenias = mongoose.Schema({
-    id: Number,
+const reseniaSchema = new mongoose.Schema({
+
+    id: String,
     materia: String,
     profesor: String,
     texto: String,
     positivas: Number,
     negativas: Number,
-    estrellas: Number
-})
+    estrellas: Number,
+});
 
-export default mongoose.model("resenias", resenias)
+const Resenia = mongoose.model('Resenia', reseniaSchema);
+
+export default Resenia;
