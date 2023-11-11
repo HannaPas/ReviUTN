@@ -2,11 +2,62 @@
 
 <header class="app-header">
     <div class="header-logo">
-        <link rel="icon" type="image/x-icon" href="/frontEnd/src/assets/logo.png">
-        <img src="/frontEnd/src/assets/logo.png" alt="Logo">
+        <link rel="icon" type="image/x-icon" href="../../../assets/logo.png">
+        <img src="../../../assets/logo.png" alt="Logo">
 
     </div>
+
+    <div class="header-search">
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+          <button class="btn btn-outline" type="submit">Buscar</button>
+        </form>
+      </div>
+
+
     <div class="header-profile">
-        <i class="fas fa-user-circle profile-icon"></i>
-    </div>
+       
+        <div class="row">
+            <div class="col">
+                <div ngbDropdown >
+                    <button id="dropdownForm1" ngbDropdownToggle class="btn btn-icon" style="background: none; border: none;">
+                        <i class="fas fa-user-circle profile-icon"></i>
+                    </button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownForm1">
+                        <form class="px-4 py-3">
+                            <div class="mb-3">
+                                <label for="exampleDropdownFormEmail1">Email address</label>
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    id="exampleDropdownFormEmail1"
+                                    placeholder="email@example.com"
+                                    autocomplete="username"
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleDropdownFormPassword1">Password</label>
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    id="exampleDropdownFormPassword1"
+                                    placeholder="Password"
+                                    autocomplete="current-password"
+                                />
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="dropdownCheck" />
+                                <label class="form-check-label" for="dropdownCheck"> Remember me </label>
+                            </div>
+                            <button type="submit" class="btn" style="background-color: rgb(132,52,148); color: white">Sign in</button>
+                        </form>
+                        <div class="dropdown-divider"></div>
+                        <button type="button" ngbDropdownItem>New around here? Sign up</button>
+                        <button type="button" ngbDropdownItem>Forgot password?</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    
 </header>
