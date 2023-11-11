@@ -6,20 +6,27 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './vistas/dashboard/dashboard.component';
 import { HeaderComponent } from './plantillas/header/header.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RatingComponent } from './plantillas/rating/rating.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    HeaderComponent
+    HeaderComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
+  exports:[
+    NgbModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
