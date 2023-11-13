@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ApiService } from '../../servicios/api/api.service'
+import { NgbRatingConfig, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -8,6 +9,7 @@ import { ApiService } from '../../servicios/api/api.service'
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
+
 export class DashboardComponent implements OnInit {
   materiaNombre: string = '';
   resenia: any;
@@ -18,6 +20,7 @@ export class DashboardComponent implements OnInit {
     /* this.cargarMateria(); */
     this.cargarResenia("1");
   }
+
 
  /*  cargarMateria(): void {
     this.http.get<any>('/api/materia') // Ajusta la URL según sea necesario

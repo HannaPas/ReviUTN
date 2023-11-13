@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './vistas/dashboard/dashboard.component';
 import { HeaderComponent } from './plantillas/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { RatingComponent } from './plantillas/rating/rating.component';
+import { RatingComponent } from './plantillas/ratingGeneral/rating.component';
 import { ToggleComponent } from './plantillas/toggle/toggle.component';
 
 
