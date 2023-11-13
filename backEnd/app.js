@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import reseniasRouter from "./reseniasRoutes.js"; // Asegúrate de que la ruta al archivo es correcta
+import cors from 'cors';
 
 const app = express();
 const port = 5500;
@@ -12,6 +13,10 @@ mongoose
     .then(() => console.log('Conexión a MongoDB establecida.'))
     .catch(err => console.error('Error al conectar a MongoDB', err));
 
+
+  
+app.use(cors());
+     
 app.use(express.json({
     limit: "50mb"
 }));

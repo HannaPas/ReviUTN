@@ -3,12 +3,20 @@
 <app-rating></app-rating> -->
 
 <app-header></app-header>
-
+<h1 style="text-align: center;font-weight:300; margin-top: 10px;">ALGEBRA</h1>
 <div style="display: grid; grid-template-columns: 1fr auto; width: 100%;">
     <app-toggle style="margin: 20px;"></app-toggle>
     <app-rating style="margin: 20px;"></app-rating>
 </div>
-  
+<div class="card" style="width: 80%; margin:auto;">
+  <div class="card-body">
+    <h5 class="card-title">Reseña número {{ resenia.id }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ resenia.materia }}</h6>
+    <p class="card-text">{{ resenia.texto }}</p>
+    <!-- Puedes agregar más campos de la reseña según sea necesario -->
 
-  
-  
+    <!-- Aquí puedes agregar enlaces si tu reseña tiene URLs relacionadas -->
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
