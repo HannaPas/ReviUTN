@@ -54,6 +54,10 @@ export class ApiService {
     return this.http.get(`${this.baseUrl}/${id}`, { headers: this.jsonHeaders });
   }
 
+  public obtenerReseniasPorMateria(materia: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/materia/${materia}`, { headers: this.jsonHeaders });
+  }
+
   // Agrega funciones para las demás operaciones (obtenerTextoResenia, obtenerReseniasPorMateria, etc.)
 }
 

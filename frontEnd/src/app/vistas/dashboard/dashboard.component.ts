@@ -12,13 +12,12 @@ import { NgbRatingConfig, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 
 export class DashboardComponent implements OnInit {
   materiaNombre: string = '';
-  resenia: any;
+  resenias: any;
 
   constructor(private http: HttpClient, private apiResenia: ApiService) { }
 
   ngOnInit(): void {
-    /* this.cargarMateria(); */
-    this.cargarResenia("1");
+    this.cargarResenias("Algebra");
   }
 
 
@@ -34,11 +33,12 @@ export class DashboardComponent implements OnInit {
       });
   } */
 
-  cargarResenia(id:string):void{
-    this.apiResenia.obtenerReseniaPorId(id)
+  cargarResenias(materia:string):void{
+    this.apiResenia.obtenerReseniasPorMateria(materia)
       .subscribe({
         next:(res) =>{
-          this.resenia = res;
+          this.resenias = res;
+          console.log(this.resenias)
           console.log("Reseña cargada", res);
         },
         error:(err)=>{
