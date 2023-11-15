@@ -55,6 +55,24 @@ router.get('/:id', (req, res) => {
         });
 });
 
+
+router.get('/', (req, res) => {
+
+
+    Resenia.find({})
+        .then(resenias => {
+
+            if (resenias.length === 0) {
+                return res.status(404).send('No se encontraron reseñas');
+            }
+            res.status(200).json(resenias);
+        })
+        .catch(err => {
+            res.status(500).send(err.message);
+        });
+});
+
+
 //Muestra el texto de una reseña
 
 router.get('/:id/texto', (req, res) => {
