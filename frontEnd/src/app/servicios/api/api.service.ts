@@ -58,6 +58,15 @@ export class ApiService {
     return this.http.get(`${this.baseUrl}/materia/${materia}`, { headers: this.jsonHeaders });
   }
 
+  public obtenerProfesoresMateria(materia:string): Observable<any>{
+    return this.http.get(`${this.baseUrl}/materia/${materia}/profesor`, { headers: this.jsonHeaders });
+  }
+
+  public obtenerEstrellasResenia(id:string): Observable<any>{
+    return this.http.get(`${this.baseUrl}/${id}/estrellas`, { headers: this.jsonHeaders });
+  }
+
+
   // Agrega funciones para las demás operaciones (obtenerTextoResenia, obtenerReseniasPorMateria, etc.)
 }
 

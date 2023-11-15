@@ -1,4 +1,4 @@
-<div class="toggle">
+<!-- <div class="toggle">
     <div class="row">
         <div class="col">
             <span>Cátedra: &nbsp;</span>
@@ -16,3 +16,21 @@
     </div>
 </div> 
 
+ -->
+
+ <div class="toggle">
+    <div class="row">
+        <div class="col">
+            <span>Cátedra: &nbsp;</span>
+            <div ngbDropdown class="d-inline-block">
+                <button type="button" class="btn btn-outline" id="dropdownBasic1" ngbDropdownToggle>
+                    Todas las catedras
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <!-- Iterar sobre la lista de profesores (catedra) -->
+                    <button *ngFor="let profesor of catedra" ngbDropdownItem>{{ profesor }}</button>
+                </div>
+            </div>
+        </div>       
+    </div>
+</div>
