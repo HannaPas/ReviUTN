@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "16ceb678-ad71-4d35-8811-4206c5882c5b",
+		"name": "API ReviUtn",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30345308",
+		"_collection_link": "https://bold-crater-917100.postman.co/workspace/New-Team-Workspace~5f58b163-1607-4e71-a383-a8841eead24f/collection/30345308-16ceb678-ad71-4d35-8811-4206c5882c5b?action=share&source=collection_link&creator=30345308"
+	},
+	"item": [
+		{
+			"name": "Reseña",
+			"item": [
+				{
+					"name": "Delete All",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:5500/api/resenias"
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"id\": 1,\r\n        \"materia\": \"Algebra\",\r\n        \"profesor\": \"Juan Ramirez\",\r\n        \"texto\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\",\r\n        \"positivas\": 20,\r\n        \"negativas\": 5,\r\n        \"estrellas\": 3\r\n    },\r\n    {\r\n        \"id\": 2,\r\n        \"materia\": \"Algebra\",\r\n        \"profesor\": \"Pedro Perez\",\r\n        \"texto\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\",\r\n        \"positivas\": 10,\r\n        \"negativas\": 2,\r\n        \"estrellas\": 2\r\n    },\r\n    {\r\n        \"id\": 3,\r\n        \"materia\": \"Algebra\",\r\n        \"profesor\": \"Juan Ramirez\",\r\n        \"texto\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\",\r\n        \"positivas\": 16,\r\n        \"negativas\": 3,\r\n        \"estrellas\": 2\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5500/api/resenias"
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5500/api/resenias/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Filtrar por Materia",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5500/api/resenias/materia/Algebra"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Todas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5500/api/resenias"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Texto",
+			"item": [
+				{
+					"name": "Get One Texto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5500/api/resenias/1/texto"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Valoraciones +",
+			"item": [
+				{
+					"name": "Get One Valoraciones +",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5500/api/resenias/1/positivas"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Valoraciones -",
+			"item": [
+				{
+					"name": "Get One Valoraciones -",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5500/api/resenias/1/negativas"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Estrellas",
+			"item": [
+				{
+					"name": "Get One Estrellas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5500/api/resenias/1/estrellas"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profesores",
+			"item": [
+				{
+					"name": "Get Profesores de una Materia",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5500/api/resenias/materia/Algebra/profesor"
+					},
+					"response": []
+				},
+				{
+					"name": "Reseñas de 1 profesor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5500/api/resenias/profesor/Juan Ramirez"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
