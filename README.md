@@ -21,6 +21,8 @@ mongodb+srv://reviutn:iTCJvCLSnPPNtLAw@cluster0.zxy3ryx.mongodb.net/?retryWrites
 
 
 ----PARA INICIALIZAR FRONT-END---
+en la consola ng add @ng-bootstrap/ng-bootstrap
+
 En la carpeta de front (dentro de la cmd) usar ng serve
 
 
