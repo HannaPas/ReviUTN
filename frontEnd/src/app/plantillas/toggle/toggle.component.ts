@@ -3,6 +3,7 @@ import { NgbDropdown } from '@ng-bootstrap/ng-bootstrap';
 import { ApiService } from '../../servicios/api/api.service'
 import { HttpClient } from '@angular/common/http';
 
+
 @Component({
   selector: 'app-toggle',
   templateUrl: './toggle.component.html',
@@ -14,23 +15,30 @@ export class ToggleComponent {
 
   constructor(private http: HttpClient, private apiResenia: ApiService) { }
 
-  
+  profesorSeleccionado: string = '';
+
   ngOnInit(): void {
     this.cargarProfesores("Algebra");
   }
 
-  cargarProfesores(materia:string):void{
+  cargarProfesores(materia: string): void {
     this.apiResenia.obtenerProfesoresMateria(materia)
       .subscribe({
-        next:(res) =>{
+        next: (res) => {
           this.catedra = res;
           console.log(this.catedra)
           console.log("Profesores cargados", res);
         },
-        error:(err)=>{
+        error: (err) => {
           alert("error al mostrar la resenia")
         }
       })
-    }  
+  }
+
+
 
 }
+
+
+
+

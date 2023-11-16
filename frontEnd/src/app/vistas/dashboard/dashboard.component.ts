@@ -21,29 +21,32 @@ export class DashboardComponent implements OnInit {
   }
 
 
- /*  cargarMateria(): void {
-    this.http.get<any>('/api/materia') // Ajusta la URL según sea necesario
-      .subscribe({
-        next: (data) => {
-          this.materiaNombre = data.nombre; // Ajusta según la estructura de tu objeto
-        },
-        error: (error) => {
-          console.error('Error al obtener la materia:', error);
-        }
-      });
-  } */
+  /*  cargarMateria(): void {
+     this.http.get<any>('/api/materia') // Ajusta la URL según sea necesario
+       .subscribe({
+         next: (data) => {
+           this.materiaNombre = data.nombre; // Ajusta según la estructura de tu objeto
+         },
+         error: (error) => {
+           console.error('Error al obtener la materia:', error);
+         }
+       });
+   } */
 
-  cargarResenias(materia:string):void{
+  cargarResenias(materia: string): void {
     this.apiResenia.obtenerReseniasPorMateria(materia)
       .subscribe({
-        next:(res) =>{
+        next: (res) => {
           this.resenias = res;
           console.log(this.resenias)
           console.log("Reseña cargada", res);
         },
-        error:(err)=>{
+        error: (err) => {
           alert("error al mostrar la resenia")
         }
       })
-    }  
+  }
+
+
+
 }
